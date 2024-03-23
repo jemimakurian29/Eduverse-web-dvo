@@ -4,43 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduverse</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <img src="eduverse-logo.jpg" alt="Eduverse" class="header-img">
+        <img src="../static/eduverse-logo.png" alt="Eduverse" class="header-img">
         <h1 class="header-text">Eduverse</h1> 
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li> <!-- Updated this line -->
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-    <h2>Explore a World of Knowledge</h2>
-    <p>Explore thousands of courses taught by top instructors.</p>
-    <a href="courses.html" class="btn">Browse All Courses</a>
-</section>
-
+        <h2>Explore a World of Knowledge</h2>
+        <p>Explore thousands of courses taught by top instructors.</p>
+        <a href="{{ url_for('courses') }}" class="btn">Browse All Courses</a> <!-- Updated this line -->
+    </section>
 
     <section class="featured-courses">
         <h2>Featured Courses</h2>
         <div class="course">
-            <img src="web-dev.webp" alt="Web Development">
+            <img src="../static/web-dev.webp" alt="Web Development">
             <h3>Introduction to Web Development</h3>
             <p>Learn the basics of web development with HTML, CSS, and JavaScript.</p>
             <a href="#" class="btn">Enroll Now</a>
         </div>
         <div class="course">
-            <img src="psychology.webp" alt="Psychology">
+            <img src="../static/psychology.webp" alt="Psychology">
             <h3>Introduction to Psychology: Understanding the Human Mind</h3>
             <p>Explore the fascinating world of psychology and gain insights into human behavior.</p>
             <a href="#" class="btn">Enroll Now</a>
         </div>
         <div class="course">
-            <img src="per-fin.jpg" alt="Finance">
+            <img src="../static/per-fin.jpg" alt="Finance">
             <h3>Personal Finance Management: Strategies for Financial Success</h3>
             <p>Take control of your finances and plan for a secure financial future.</p>
             <a href="#" class="btn">Enroll Now</a>
@@ -48,7 +47,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Eduverse . All rights reserved.</p>
+        <p>&copy; 2024 Eduverse. All rights reserved.</p>
     </footer>
 </body>
 </html>

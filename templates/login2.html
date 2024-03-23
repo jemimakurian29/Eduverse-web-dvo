@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><img src="../static/eduverse-logo.png" alt="Eduverse" class="header-img"> Eduverse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="login-container">
+        <form action="#" method="POST" class="login-form" id="signin-form">
+            <h2>Welcome to Eduverse</h2>
+            <p>Sign in to your account</p>
+            <!-- Add a div for displaying login errors -->
+            <div id="login-error" class="error-message" style="display: none;"></div>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <p>Don't have an account? <a href="#signup" id="signup-link">Sign up here</a></p>
+        </form>
+
+        <div id="signup" class="signup-form" style="display: none;">
+            <form action="#" method="POST" class="login-form" id="register-form">
+                <h2>Create an Account</h2>
+                <p>Sign up for a new account</p>
+                <!-- Add a div for displaying registration errors -->
+                <div id="registration-error" class="error-message" style="display: none;"></div>
+                <div class="input-group">
+                    <label for="new-email">Email</label>
+                    <input type="email" id="new-email" name="new-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="new-username">Username</label>
+                    <input type="text" id="new-username" name="new-username" required>
+                </div>
+                <div class="input-group">
+                    <label for="new-password">Password</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p>Already have an account? <a href="#" id="signin-link">Sign in here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for displaying login and registration forms -->
+    <script>
+        document.getElementById('signup-link').addEventListener('click', function() {
+            document.getElementById('signin-form').style.display = 'none';
+            document.getElementById('signup').style.display = 'block';
+        });
+
+        document.getElementById('signin-link').addEventListener('click', function() {
+            document.getElementById('signin-form').style.display = 'block';
+            document.getElementById('signup').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
