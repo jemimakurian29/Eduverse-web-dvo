@@ -1,5 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
+import os
+
+# Change the current working directory to the desired location
+os.chdir("C:/KJC Work/dvo eduverse (coursera)")
+
+# Now you can run your Python script as usual
+
 
 app = Flask(__name__)
 
@@ -65,6 +72,23 @@ def home_page():
 @app.route('/courses')
 def courses():
     return render_template('courses.html')
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
+
+# Route for the course page
+@app.route('/c1webdev')
+def course_webdev():
+    return render_template('c1webdev.html')
+
+@app.route('/c2psychology')
+def course_psych():
+    return render_template('c2psychology.html')
+
+@app.route('/c3perfin')
+def course_perfin():
+    return render_template('c3perfin.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

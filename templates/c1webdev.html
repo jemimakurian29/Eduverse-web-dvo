@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Web Development</title>
+    <!-- Add the link to your CSS file here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../static/eduverse-logo.png" alt="Eduverse" class="header-img">
+            <h1 class="header-text">Introduction to Web Development</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="module">
+        <h2>Module 1: HTML Basics</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Introduction to HTML</h3>
+                <p>HTML (Hypertext Markup Language) forms the backbone of web pages, providing a structured framework for presenting content on the internet. At its core, an HTML document consists of a series of elements, each enclosed within tags that define their purpose and behavior on the page. These tags act as instructions, telling web browsers how to interpret and display the content they enclose. Among the fundamental elements are headings, paragraphs, and lists, essential for organizing and formatting text. Headings, denoted by &lt;h1&gt; to &lt;h6&gt; tags, delineate hierarchical levels of importance within the document. Paragraphs, wrapped in &lt;p&gt; tags, segment text into readable blocks. Lists, represented by &lt;ul&gt; (unordered) and &lt;ol&gt; (ordered) tags, arrange content into bulleted or numbered sequences, aiding in clarity and comprehension. Through these elements and tags, web developers craft coherent structures, facilitating seamless navigation and comprehension for users accessing information across the vast expanse of the World Wide Web.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: HTML Forms and Input</h3>
+                <p>HTML forms are essential for gathering user input on web pages, allowing visitors to submit data for processing. Form elements such as text fields, checkboxes, radio buttons, and dropdown menus enable users to provide various types of information, from simple text entries to selecting options from predefined lists. Each form element is defined using specific HTML tags and attributes, with additional attributes for controlling validation, input restrictions, and submission behavior. Understanding how to create and customize HTML forms empowers web developers to design interactive and user-friendly interfaces, enhancing the overall browsing experience for website visitors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module">
+        <h2>Module 2: CSS Fundamentals</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Introduction to CSS</h3>
+                <p>CSS (Cascading Style Sheets) plays a crucial role in web development by providing a mechanism for styling HTML documents. With CSS, developers can control the appearance and layout of web content, including fonts, colors, margins, and spacing. By selecting HTML elements using CSS selectors and applying styles through properties and values, designers can achieve a wide range of visual effects and design aesthetics. Understanding the basics of CSS enables developers to create cohesive and visually appealing web pages that resonate with users and convey information effectively.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: CSS Layouts and Positioning</h3>
+                <p>Layout and positioning are essential concepts in CSS for arranging elements on a web page and controlling their placement relative to one another. CSS offers various techniques for creating flexible and responsive layouts, including floats, flexbox, and grid systems. Additionally, developers can use positioning properties such as relative, absolute, and fixed to precisely control the positioning of elements within their document flow. Mastering CSS layouts and positioning empowers developers to create visually appealing and well-structured web interfaces that adapt seamlessly to different screen sizes and devices.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module">
+        <h2>Module 3: JavaScript Essentials</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Introduction to JavaScript</h3>
+                <p>JavaScript is a powerful scripting language used to add interactivity and dynamic behavior to web pages. As a client-side language, JavaScript runs directly within the browser environment, enabling developers to manipulate the Document Object Model (DOM), handle user interactions, and create dynamic content on the fly. With its rich ecosystem of libraries and frameworks, JavaScript facilitates a wide range of functionalities, from form validation and DOM manipulation to AJAX requests and interactive animations. Understanding the fundamentals of JavaScript is essential for building modern web applications and delivering engaging user experiences.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: DOM Manipulation</h3>
+                <p>The Document Object Model (DOM) is a programming interface that represents the structure and content of a web document as a hierarchical tree of objects. Through DOM manipulation, developers can access, modify, and update the elements and attributes of a web page dynamically. JavaScript provides powerful APIs for traversing the DOM, querying elements, and manipulating their properties and styles. By leveraging DOM manipulation techniques, developers can create interactive and responsive web applications that respond to user actions in real-time, enhancing usability and functionality.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

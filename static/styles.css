@@ -5,195 +5,214 @@
             password="Grace678",
             host="local_pgdb",
             port="5432"*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Trebuchet MS", sans-serif;
-    background-color: #EDD6CC; /* Light beige background */
-    color: #233349; /* Dark blue text */
-}
-
-header {
-    background-color: #D3A292; /* Light brown header */
-    color: #233349;
-    padding: 20px;
-    text-align: center; /* Center-align the contents of the header */
-}
-
-header .header-img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-    display: inline-block; /* Make the image inline-block */
-    vertical-align: middle; /* Align the image vertically with the text */
-}
-
-.header-text {
-    font-size: 50px; /* Adjust the font size as needed */
-    margin-left: 10px; /* Adjust the margin to create space between the logo and text */
-    display: inline-block; /* Make the text inline-block */
-    vertical-align: middle; /* Align the text vertically with the image */
-    color: #233349; /* Color of the text */
-    font-family: "Trebuchet MS", sans-serif;
-}
-
-
-nav ul {
-    list-style-type: none;
-    text-align: left; /* Align the text of the navigation links to the left */
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #233349; /* Dark blue text for navigation links */
-    text-decoration: none;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px 0;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #C4772A; /* Orange button */
-    color: #fff;
-    padding: 10px 20px; /* Adjusted padding */
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px; /* Adjusted font size */
-    width: 150px; /* Standard width */
-    height: 40px; /* Standard height */
-    text-align: center; /* Center button text */
-    white-space: nowrap;
-}
-
-.btn:hover {
-    background-color: #A8512F; /* Darker orange on hover */
-}
-
-.featured-courses,
-.all-courses {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px 0;
-}
-
-.course {
-    display: flex; /* Add flexbox layout for course items */
-    background-color: #9EAFB6; /* Light blue background for course cards */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.course img {
-    width: 350px; /* Set the width of course images */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 5px 0 0 5px;
-}
-
-.course-content {
-    padding: 20px;
-    flex: 1; /* Make the course content flexible to fill remaining space */
-}
-
-.course h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.course p {
-    color: #233349; /* Dark blue text for course description */
-    margin-bottom: 10px;
-}
-
-.course .btn {
-    background-color: #C4772A; /* Orange button */
-    color: #fff;
-    padding: 10px 20px; /* Adjusted padding */
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px; /* Adjusted font size */
-    width: 150px; /* Standard width */
-    height: 40px; /* Standard height */
-    text-align: center; /* Center button text */
-}
-
-.course .btn:hover {
-    background-color: #A8512F; /* Darker orange on hover */
-}
-
-footer {
-    background-color: #D3A292; /* Light brown footer */
-    color: #233349;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.login-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.login-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: "Trebuchet MS", sans-serif;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-family: "Trebuchet MS", sans-serif;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: "Trebuchet MS", sans-serif;
-}
-
-.login-form .btn { /* Modify specific class for login button */
-    background-color: #C4772A; /* Orange button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    font-family: "Trebuchet MS", sans-serif;
-}
-
-.login-form .btn:hover {
-    background-color: #A8512F; /* Darker orange on hover */
-}
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: "Trebuchet MS", sans-serif;
+                background-color: #EDD6CC; /* Light beige background */
+                color: #233349; /* Dark blue text */
+            }
+            
+            header {
+                background-color: #D3A292; /* Light brown header */
+                color: #233349;
+                padding: 20px;
+                text-align: center; /* Center-align the contents of the header */
+            }
+            
+            header .header-img {
+                width: 100px; /* Adjust the width as needed */
+                height: auto; /* Maintain the aspect ratio */
+                display: inline-block; /* Make the image inline-block */
+                vertical-align: middle; /* Align the image vertically with the text */
+            }
+            
+            .header-text {
+                font-size: 50px; /* Adjust the font size as needed */
+                margin-left: 10px; /* Adjust the margin to create space between the logo and text */
+                display: inline-block; /* Make the text inline-block */
+                vertical-align: middle; /* Align the text vertically with the image */
+                color: #233349; /* Color of the text */
+                font-family: "Trebuchet MS", sans-serif;
+            }
+            
+            
+            nav ul {
+                list-style-type: none;
+                text-align: left; /* Align the text of the navigation links to the left */
+            }
+            
+            nav ul li {
+                display: inline;
+                margin-right: 20px;
+            }
+            
+            nav ul li a {
+                color: #233349; /* Dark blue text for navigation links */
+                text-decoration: none;
+            }
+            
+            .hero {
+                text-align: center;
+                padding: 50px 0;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+            
+            .btn {
+                display: inline-block;
+                background-color: #C4772A; /* Orange button */
+                color: #fff;
+                padding: 10px 20px; /* Adjusted padding */
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 14px; /* Adjusted font size */
+                width: 150px; /* Standard width */
+                height: 40px; /* Standard height */
+                text-align: center; /* Center button text */
+                white-space: nowrap;
+            }
+            
+            .btn:hover {
+                background-color: #A8512F; /* Darker orange on hover */
+            }
+            
+            .featured-courses,
+            .all-courses {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 50px 0;
+            }
+            
+            .course {
+                display: flex; /* Add flexbox layout for course items */
+                background-color: #9EAFB6; /* Light blue background for course cards */
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+            }
+            
+            .course img {
+                width: 350px; /* Set the width of course images */
+                height: auto; /* Maintain the aspect ratio */
+                border-radius: 5px 0 0 5px;
+            }
+            
+            .course-content {
+                padding: 20px;
+                flex: 1; /* Make the course content flexible to fill remaining space */
+            }
+            
+            .course h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .course p {
+                color: #233349; /* Dark blue text for course description */
+                margin-bottom: 10px;
+            }
+            
+            .course .btn {
+                background-color: #C4772A; /* Orange button */
+                color: #fff;
+                padding: 10px 20px; /* Adjusted padding */
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 14px; /* Adjusted font size */
+                width: 150px; /* Standard width */
+                height: 40px; /* Standard height */
+                text-align: center; /* Center button text */
+            }
+            
+            .course .btn:hover {
+                background-color: #A8512F; /* Darker orange on hover */
+            }
+        
+            
+            footer {
+                background-color: #D3A292; /* Light brown footer */
+                color: #233349;
+                text-align: center;
+                padding: 20px 0;
+            }
+            
+            .login-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            
+            .login-form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            
+            .login-form h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-family: "Trebuchet MS", sans-serif;
+            }
+            
+            .input-group {
+                margin-bottom: 20px;
+            }
+            
+            .input-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-family: "Trebuchet MS", sans-serif;
+            }
+            
+            .input-group input {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-family: "Trebuchet MS", sans-serif;
+            }
+            
+            .login-form .btn { /* Modify specific class for login button */
+                background-color: #C4772A; /* Orange button */
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                width: 100%;
+                font-family: "Trebuchet MS", sans-serif;
+            }
+            
+            .login-form .btn:hover {
+                background-color: #A8512F; /* Darker orange on hover */
+            }
+            .module {
+                border: 1px solid #ccc; /* Add a border around each module */
+                margin-bottom: 20px; /* Add some spacing between modules */
+                padding: 15px; /* Add padding inside each module */
+              }
+              
+              .module h2 {
+                margin-top: 0; /* Remove default margin from the top of each module title */
+              }
+              
+              .module .lessons {
+                margin-top: 10px; /* Add some spacing between the module title and lessons */
+              }
+              
+              .module .lesson {
+                margin-bottom: 15px; /* Add some spacing between lessons */
+              }
+              

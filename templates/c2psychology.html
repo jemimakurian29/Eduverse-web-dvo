@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Psychology</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../static/eduverse-logo.png" alt="Eduverse" class="header-img">
+            <h1 class="header-text">Introduction to Psychology</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                    <li><a href="{{ url_for('courses') }}">Courses</a></li> 
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="module">
+            <h2>Module 1: Fundamentals of Psychology</h2>
+            <div class="lessons">
+                <div class="lesson">
+                    <h3>Lesson 1: Introduction to Psychology</h3>
+                    <p>Gain an overview of the field of psychology, its history, and key concepts.</p>
+                    <p>
+                        Psychology is the scientific study of behavior and mental processes. In this lesson, you will explore the origins of psychology as a discipline, tracing its development from ancient philosophical inquiries to its establishment as a scientific field. You will also learn about the various branches of psychology and the fundamental principles that guide psychological research.
+                    </p>
+                </div>
+                <div class="lesson">
+                    <h3>Lesson 2: Research Methods in Psychology</h3>
+                    <p>Explore various research methods used in psychology to study human behavior and mental processes.</p>
+                    <p>
+                        Research methods are essential tools for psychologists to investigate and understand human behavior and mental processes. In this lesson, you will explore different research designs, such as experiments, surveys, and observational studies, and learn how psychologists collect, analyze, and interpret data. You will also examine ethical considerations in psychological research and the importance of critical thinking in evaluating research findings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="module">
+            <h2>Module 2: Biological Bases of Behavior</h2>
+            <div class="lessons">
+                <div class="lesson">
+                    <h3>Lesson 1: The Brain and Nervous System</h3>
+                    <p>Learn about the structure and functions of the brain and nervous system and their role in behavior.</p>
+                    <p>
+                        The brain and nervous system play a crucial role in shaping human behavior and mental processes. In this lesson, you will explore the anatomy and functions of the brain, including its major structures and how they interact to control various bodily functions and behaviors. You will also learn about the role of neurons, neurotransmitters, and neural networks in transmitting signals within the nervous system and coordinating behavior.
+                    </p>
+                </div>
+                <div class="lesson">
+                    <h3>Lesson 2: Genetics and Behavior</h3>
+                    <p>Explore the influence of genetics on behavior and psychological traits.</p>
+                    <p>
+                        Genetics plays a significant role in shaping human behavior and psychological traits. In this lesson, you will learn about the basics of genetics, including DNA, genes, and inheritance patterns. You will explore how genetic factors influence individual differences in behavior, personality, intelligence, and mental health. You will also examine the interaction between genetic and environmental factors in shaping human development and behavior.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="module">
+            <h2>Module 3: Understanding Human Behavior</h2>
+            <div class="lessons">
+                <div class="lesson">
+                    <h3>Lesson 1: Theories of Personality</h3>
+                    <p>Examine different theories of personality and their implications for understanding human behavior.</p>
+                    <p>
+                        Personality is a complex and multifaceted construct that influences how individuals think, feel, and behave. In this lesson, you will explore major theories of personality, including psychodynamic, behavioral, humanistic, and trait perspectives. You will examine the key concepts and assumptions of each theory and consider their strengths and limitations in explaining individual differences in behavior and personality development.
+                    </p>
+                </div>
+                <div class="lesson">
+                    <h3>Lesson 2: Social Psychology</h3>
+                    <p>Investigate the influence of social factors on individual behavior and interactions.</p>
+                    <p>
+                        Social psychology examines how social influences shape individual behavior, attitudes, and beliefs. In this lesson, you will explore topics such as social perception, social cognition, conformity, obedience, prejudice, and interpersonal relationships. You will examine classic and contemporary research studies that illustrate the power of social context in influencing human behavior and decision-making. You will also consider real-world applications of social psychological principles in various domains, including advertising, politics, and interpersonal communication.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Eduverse. All rights reserved.</p>
+    </footer>
+</body>
+</html>

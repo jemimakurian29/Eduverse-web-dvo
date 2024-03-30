@@ -12,8 +12,9 @@
         <h1 class="header-text">Eduverse</h1> 
         <nav>
             <ul>
-                <li><a href="homepg2.html">Home</a></li>
-                <li><a href="#">Courses</a></li>
+                <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li> 
             </ul>
         </nav>
     </header>
@@ -24,19 +25,19 @@
             <img src="../static/web-dev.webp" alt="Web Development">
             <h3>Introduction to Web Development</h3>
             <p>Learn the basics of web development with HTML, CSS, and JavaScript.</p>
-            <a href="#" class="btn">Enroll Now</a>
+            <a href="{{ url_for('course_webdev') }}" class="btn">Enroll Now</a>
         </div>
         <div class="course">
             <img src="../static/psychology.webp" alt="Psychology">
             <h3>Introduction to Psychology: Understanding the Human Mind</h3>
             <p>Explore the fascinating world of psychology and gain insights into human behavior.</p>
-            <a href="#" class="btn">Enroll Now</a>
+            <a href="{{ url_for('course_psych') }}" class="btn">Enroll Now</a>
         </div>
         <div class="course">
             <img src="../static/per-fin.jpg" alt="Finance">
             <h3>Personal Finance Management: Strategies for Financial Success</h3>
             <p>Take control of your finances and plan for a secure financial future.</p>
-            <a href="#" class="btn">Enroll Now</a>
+            <a href="{{ url_for('course_perfin') }}" class="btn">Enroll Now</a>
         </div>
         <div class="course">
             <img src="../static/graphic-des.jpg" alt="Graphic Design">

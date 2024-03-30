@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Management</title>
+    <!-- Add the link to your CSS file here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../static/eduverse-logo.png" alt="Eduverse" class="header-img">
+            <h1 class="header-text">Personal Finance Management</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="module">
+        <h2>Module 1: Understanding Personal Finance</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Introduction to Personal Finance</h3>
+                <p>Basic financial concepts are essential for individuals to effectively manage their finances. Budgeting is a fundamental tool that helps individuals track income and expenses, allowing for better financial decision-making. It involves allocating funds for various needs such as housing, groceries, transportation, and entertainment while ensuring that spending does not exceed income. Additionally, budgeting enables individuals to save for emergencies, investments, and long-term goals. Financial goal setting is another crucial aspect of personal finance, as it provides direction and motivation for achieving desired outcomes. Setting SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals helps individuals prioritize objectives such as debt repayment, saving for retirement, purchasing a home, or funding education. By understanding these basic financial concepts, practicing effective budgeting, and setting realistic financial goals, individuals can take control of their finances and work towards a secure financial future.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Financial Planning</h3>
+                <p>Financial planning involves evaluating an individual's current financial situation, identifying financial goals, and developing strategies to achieve those goals. It encompasses various aspects such as cash flow management, risk management, investment planning, retirement planning, and estate planning. Through financial planning, individuals can prioritize their financial objectives, allocate resources efficiently, and make informed decisions about saving, investing, and spending. By creating a comprehensive financial plan, individuals can navigate life's financial challenges, minimize risks, and work towards achieving their long-term financial aspirations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module">
+        <h2>Module 2: Budgeting and Saving</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Creating a Budget</h3>
+                <p>Creating a budget involves assessing income, identifying expenses, and allocating funds to different spending categories. It allows individuals to prioritize essential expenses, track discretionary spending, and identify areas for cost-cutting or optimization. Budgeting helps individuals achieve financial discipline, manage cash flow effectively, and work towards their financial goals. By creating a realistic budget and monitoring spending habits, individuals can make informed financial decisions, reduce financial stress, and achieve greater financial stability.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Saving Strategies</h3>
+                <p>Saving strategies are techniques employed to accumulate funds for future needs, emergencies, or financial goals. Common saving strategies include setting up automatic transfers to savings accounts, creating an emergency fund, and adopting a "pay yourself first" approach. Saving strategies also involve minimizing expenses, maximizing income, and leveraging tax-advantaged savings accounts such as IRAs (Individual Retirement Accounts) or 401(k) plans. By implementing effective saving strategies, individuals can build financial resilience, achieve financial independence, and pursue their desired lifestyle without compromising their long-term financial security.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module">
+        <h2>Module 3: Investment Basics</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Understanding Investments</h3>
+                <p>Investments are financial assets or instruments acquired with the expectation of generating income or appreciation in value over time. Common investment options include stocks, bonds, mutual funds, real estate, and exchange-traded funds (ETFs). Understanding investments involves assessing risk tolerance, evaluating investment objectives, and conducting due diligence on investment opportunities. By diversifying investment portfolios, managing risk, and aligning investments with financial goals, individuals can build wealth, generate passive income, and achieve long-term financial growth.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Retirement Planning</h3>
+                <p>Retirement planning is the process of determining retirement income goals and the actions necessary to achieve those goals. It involves identifying retirement expenses, estimating retirement income needs, and developing a savings plan to fund retirement. Retirement planning considers various factors such as life expectancy, inflation, healthcare costs, and Social Security benefits. Common retirement planning strategies include contributing to retirement accounts, such as 401(k) plans or IRAs, investing in tax-efficient retirement vehicles, and optimizing Social Security benefits. By starting early, saving consistently, and seeking professional advice, individuals can create a retirement plan that provides financial security and peace of mind during their retirement years.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
