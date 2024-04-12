@@ -23,18 +23,18 @@
     <section class="profile-section">
         <div class="user-details">
             <h2>User Information</h2>
-            <p><strong>Name:</strong> John Doe</p>
-            <p><strong>Email:</strong> john.doe@example.com</p>
-            <p><strong>Username:</strong> johndoe123</p>
+            <p><strong>Name:</strong> {{ user['name'] }}</p>
+            <p><strong>Email:</strong> {{ user['email'] }}</p>
+            <p><strong>Username:</strong> {{ user['username'] }}</p>
         </div>
-        <div class="enrolled-courses">
+       <!-- <div class="enrolled-courses">
             <h2>Enrolled Courses</h2>
             <ul>
-                <li>Introduction to Web Development</li>
-                <li>Personal Finance Management</li>
-                <li>Data Science Fundamentals</li>
+                {% for course in user['enrolled_courses'] %}
+                    <li>{{ course }}</li>
+                {% endfor %}
             </ul>
-        </div>
+        </div>-->
     </section>
 </body>
 </html>

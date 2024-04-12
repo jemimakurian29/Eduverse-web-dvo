@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  website:
+    image: flask12-api
+    ports:
+      - "5000:5000"
+  db:
+    image: postgres
+    container_name: locall_pgdb
+    restart: always
+    ports:
+      - "5433:5433"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: Grace678
+    volumes:
+      - local_pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_containerr
+    restart: always
+    ports:
+      - "8889:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: jemima.kurian@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: graceadmin
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+volumes:
+  local_pgdata:
+  pgadmin-data:

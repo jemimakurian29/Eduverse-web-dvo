@@ -1,15 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 import psycopg2
 import os
 
-# Change the current working directory to the desired location
-os.chdir("C:/KJC Work/dvo eduverse (coursera)")
-
-# Now you can run your Python script as usual
+#os.chdir("C:\\KJC Work\\dvo eduverse (coursera)")
 
 
 app = Flask(__name__)
-
+app.secret_key = 'gracepwd'
 # Function to authenticate user
 def authenticate_user(username, password):
     try:
@@ -54,14 +51,37 @@ def login():
         username = request.form['username']
         password = request.form['password']
         
-        user = authenticate_user(username, password)
-        if user:
+        # Authenticate the user (replace this with your authentication logic)
+        authenticated_user = authenticate_user(username, password)
+        
+        if authenticated_user:
+            # Assuming authenticate_user returns a tuple with user details
+            user_details = {
+                'name': authenticated_user[0],
+                'email': authenticated_user[1],
+                'username': username,
+                'enrolled_courses': authenticated_user[2]
+            }
+            # Store user information in session
+            session['user'] = user_details
+            session['logged_in'] = True
             # Redirect to home page upon successful login
             return redirect(url_for('home_page'))
         else:
             return "Authentication failed. Invalid username or password."
     else:
         return render_template('login2.html')
+
+    
+@app.route('/profile')
+def profile():
+    # Check if the user is logged in
+    if 'user' in session and session['logged_in']:
+        # Retrieve user information from session
+        user = session['user']
+        return render_template('profile.html', user=user)
+    else:
+        return redirect(url_for('login'))
 
 # Home page route
 @app.route('/home')
@@ -72,10 +92,6 @@ def home_page():
 @app.route('/courses')
 def courses():
     return render_template('courses.html')
-
-@app.route('/profile')
-def profile():
-    return render_template('profile.html')
 
 # Route for the course page
 @app.route('/c1webdev')
@@ -91,4 +107,4 @@ def course_perfin():
     return render_template('c3perfin.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
