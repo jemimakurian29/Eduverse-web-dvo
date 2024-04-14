@@ -71,6 +71,52 @@ def login():
             return "Authentication failed. Invalid username or password."
     else:
         return render_template('login2.html')
+    
+# Route for registration page
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        new_email = request.form['new-email']
+        new_username = request.form['new-username']
+        new_password = request.form['new-password']
+        
+        try:
+            # Connect to your PostgreSQL database
+            conn = psycopg2.connect(
+                dbname="admin",
+                user="admin",
+                password="Grace678",
+                host="localhost",
+                port="5432"
+            )
+
+            # Create a cursor object
+            cur = conn.cursor()
+
+            # Check if the username or email already exists in the database
+            cur.execute("SELECT * FROM logcreds WHERE username = %s OR email = %s", (new_username, new_email))
+            existing_user = cur.fetchone()
+
+            if existing_user:
+                return "Username or email already exists. Please choose a different one."
+
+            # If username or email doesn't exist, insert the new user into the database
+            cur.execute("INSERT INTO logcreds (username, email, password) VALUES (%s, %s, %s)", (new_username, new_email, new_password))
+            conn.commit()
+
+            # Close the cursor and connection
+            cur.close()
+            conn.close()
+
+            # Redirect to login page after successful registration
+            return redirect(url_for('login'))
+
+        except psycopg2.Error as e:
+            print("Error connecting to the database:", e)
+            return "An error occurred during registration. Please try again later."
+
+    else:
+        return render_template('login2.html')
 
     
 @app.route('/profile')
