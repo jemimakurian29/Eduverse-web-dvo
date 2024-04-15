@@ -15,7 +15,7 @@ def authenticate_user(username, password):
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="localhost",
+            host="db",
             port="5432"
         )
 
@@ -79,24 +79,24 @@ def register():
         new_email = request.form['new-email']
         new_username = request.form['new-username']
         new_password = request.form['new-password']
-        
+        print("Hello0")
         try:
             # Connect to your PostgreSQL database
             conn = psycopg2.connect(
                 dbname="admin",
                 user="admin",
                 password="Grace678",
-                host="localhost",
+                host="db",
                 port="5432"
             )
 
             # Create a cursor object
             cur = conn.cursor()
-
+            print("Hello1")
             # Check if the username or email already exists in the database
             cur.execute("SELECT * FROM logcreds WHERE username = %s OR email = %s", (new_username, new_email))
             existing_user = cur.fetchone()
-
+            print("Hello2")
             if existing_user:
                 return "Username or email already exists. Please choose a different one."
 

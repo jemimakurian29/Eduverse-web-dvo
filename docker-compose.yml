@@ -1,15 +1,15 @@
 version: "3.8"
 services:
   website:
-    image: flask12-api
+    image: flask15-api
     ports:
       - "5000:5000"
   db:
     image: postgres
-    container_name: locall_pgdb
+    container_name: local_pgdb2
     restart: always
     ports:
-      - "5433:5433"
+      - "5432:5432"
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: Grace678
@@ -17,7 +17,7 @@ services:
       - local_pgdata:/var/lib/postgresql/data
   pgadmin:
     image: dpage/pgadmin4
-    container_name: pgadmin4_containerr
+    container_name: pgadmin4_container2
     restart: always
     ports:
       - "8889:80"
