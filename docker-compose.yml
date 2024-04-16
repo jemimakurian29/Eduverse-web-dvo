@@ -1,12 +1,15 @@
-version: "3.8"
 services:
-  website:
-    image: flask15-api
+  web:
+    build: .
+    command: sh -c "python app.py"
     ports:
       - "5000:5000"
+    depends_on:
+      db:
+        condition: service_started
   db:
     image: postgres
-    container_name: local_pgdb2
+    container_name: locall_pgdb
     restart: always
     ports:
       - "5432:5432"
@@ -17,7 +20,7 @@ services:
       - local_pgdata:/var/lib/postgresql/data
   pgadmin:
     image: dpage/pgadmin4
-    container_name: pgadmin4_container2
+    container_name: pgadmin4_containerr
     restart: always
     ports:
       - "8889:80"
