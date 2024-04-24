@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming for Beginners</title>
+    <!-- Add the link to your CSS file here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../static/eduverse-logo.png" alt="Eduverse" class="header-img">
+            <h1 class="header-text">Python Programming for Beginners</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="module">
+        <h2>Module 1: Introduction to Python</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Getting Started with Python</h3>
+                <p>Python is a versatile and beginner-friendly programming language widely used for various purposes, including web development, data analysis, artificial intelligence, and more. In this lesson, you'll learn the basics of Python programming, including how to install Python, write your first program, and understand fundamental concepts such as variables, data types, and basic operations.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Control Flow and Loops</h3>
+                <p>Control flow and loops are essential concepts in programming that allow you to control the flow of execution in your Python programs. In this lesson, you'll learn about conditional statements such as if, elif, and else, as well as loop structures such as for loops and while loops. You'll also explore how to use these constructs to make decisions and iterate over sequences of data.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 3: Functions and Modules</h3>
+                <p>Functions and modules are powerful tools in Python for organizing and reusing code. In this lesson, you'll learn how to define functions to encapsulate reusable pieces of code and how to organize your code into modules for better maintainability and readability. You'll also explore how to use built-in and third-party modules to extend the functionality of your Python programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module">
+        <h2>Module 2: Data Structures and Collections</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Lists and Tuples</h3>
+                <p>Lists and tuples are two fundamental data structures in Python for storing collections of items. In this lesson, you'll learn how to work with lists and tuples, including how to create, access, and manipulate elements in these data structures. You'll also explore common operations and methods for working with lists and tuples.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Dictionaries and Sets</h3>
+                <p>Dictionaries and sets are two more data structures in Python that allow you to store collections of items with unique keys or values. In this lesson, you'll learn about dictionaries and sets, including how to create, access, and manipulate elements in these data structures. You'll also explore common operations and methods for working with dictionaries and sets.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 3: Strings and String Manipulation</h3>
+                <p>Strings are sequences of characters in Python that represent text data. In this lesson, you'll learn about strings and how to manipulate them using various methods and operations. You'll explore string concatenation, slicing, formatting, and more, gaining a solid understanding of how to work with textual data in Python.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module">
+        <h2>Module 3: Advanced Python Topics</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Object-Oriented Programming (OOP)</h3>
+                <p>Object-oriented programming (OOP) is a programming paradigm that revolves around the concept of objects, which encapsulate data and behavior. In this lesson, you'll learn about the principles of OOP and how to define classes and objects in Python. You'll explore concepts such as inheritance, polymorphism, and encapsulation, gaining a deeper understanding of how to design and implement object-oriented solutions in Python.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Error Handling and Exceptions</h3>
+                <p>Error handling and exceptions are essential aspects of writing robust and reliable Python code. In this lesson, you'll learn how to handle errors and exceptions gracefully in your Python programs. You'll explore the try-except block, as well as how to raise and handle custom exceptions, ensuring that your programs can gracefully recover from unexpected errors and failures.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 3: File Handling and Input/Output</h3>
+                <p>File handling and input/output (I/O) operations are common tasks in Python for working with files and streams of data. In this lesson, you'll learn how to open, read from, and write to files in Python. You'll explore different modes of file access, as well as techniques for reading and writing structured data from and to files. You'll also learn how to handle file exceptions and manage file resources effectively.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

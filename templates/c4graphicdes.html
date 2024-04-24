@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Essentials</title>
+    <!-- Add the link to your CSS file here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../static/eduverse-logo.png" alt="Eduverse" class="header-img">
+            <h1 class="header-text">Graphic Design Essentials</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="module">
+        <h2>Module 1: Design Principles</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Introduction to Graphic Design</h3>
+                <p>Graphic design is the art and practice of planning and projecting ideas and experiences with visual and textual content. It involves combining typography, photography, illustration, and color to communicate messages effectively. This lesson introduces the fundamentals of graphic design, including design principles such as balance, contrast, alignment, and repetition. Students will learn how these principles influence the creation of visually appealing designs and how to apply them in their own work.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Color Theory</h3>
+                <p>Color theory is a fundamental concept in graphic design that explores the principles of color mixing and the effects of different color combinations. Understanding color theory enables designers to create visually appealing and harmonious compositions. This lesson covers topics such as the color wheel, color harmony, and the psychological effects of color. Students will learn how to select and combine colors effectively to evoke desired emotions and enhance the overall impact of their designs.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 3: Visual Communication</h3>
+                <p>Visual communication is an essential aspect of graphic design that involves conveying messages and information through visual elements. This lesson explores the principles of visual communication, including symbolism, iconography, and visual metaphors. Students will learn how to use imagery and symbolism to communicate concepts and ideas effectively, ensuring that their designs resonate with the intended audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module">
+        <h2>Module 2: Typography</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Introduction to Typography</h3>
+                <p>Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed. This lesson explores the history of typography, typographic terminology, and the principles of typography in graphic design. Students will learn about different typefaces, font classifications, and typographic hierarchy, gaining an understanding of how typography can enhance the clarity and visual impact of their designs.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Typeface Selection</h3>
+                <p>Choosing the right typeface is essential for effective communication in graphic design. This lesson discusses different typeface classifications, font families, and considerations for selecting typefaces based on project requirements and design objectives. Students will learn how to choose appropriate typefaces that complement their designs and convey the intended message to the audience effectively.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 3: Typographic Layout</h3>
+                <p>Typographic layout plays a crucial role in graphic design by determining the arrangement and hierarchy of text elements within a design. This lesson explores typographic layout techniques, including alignment, spacing, and grid systems. Students will learn how to create visually appealing and well-structured layouts that enhance readability and comprehension.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module">
+        <h2>Module 3: Layout and Composition</h2>
+        <div class="lessons">
+            <div class="lesson">
+                <h3>Lesson 1: Layout Principles</h3>
+                <p>Layout principles govern the arrangement of visual elements on a page or screen to create a cohesive and visually pleasing design. This lesson covers topics such as grid systems, visual hierarchy, and balance in layout design. Students will learn how to use layout principles to organize content effectively and create visually compelling designs that engage the audience.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 2: Composition Techniques</h3>
+                <p>Composition techniques help designers organize and structure visual elements within a design to convey information effectively and engage the audience. This lesson explores composition principles such as focal points, framing, and symmetry in graphic design. Students will learn how to apply composition techniques to create dynamic and visually appealing designs that capture and maintain the viewer's attention.</p>
+            </div>
+            <div class="lesson">
+                <h3>Lesson 3: Visual Branding</h3>
+                <p>Visual branding is the process of creating a consistent visual identity that reflects the values and personality of a brand. This lesson explores the elements of visual branding, including logos, color palettes, and typography. Students will learn how to develop cohesive visual identities that strengthen brand recognition and resonate with target audiences.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

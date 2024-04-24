@@ -152,5 +152,13 @@ def course_psych():
 def course_perfin():
     return render_template('c3perfin.html')
 
+@app.route('/c4graphicdes')
+def course_graphicdes():
+    return render_template('c4graphicdes.html')
+
+@app.route('/c5python')
+def course_python():
+    return render_template('c5python.html')
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
