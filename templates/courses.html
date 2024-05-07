@@ -21,38 +21,46 @@
 
     <section class="all-courses">
         <h2>All Courses</h2>
+
         <div class="course">
-            <img src="../static/web-dev.webp" alt="Web Development">
-            <h3>Introduction to Web Development</h3>
-            <p>Learn the basics of web development with HTML, CSS, and JavaScript.</p>
+            <img src="../static/web-dev.webp" alt="{{ session['courses_data'][0][1] }}">
+            <h3>{{ session['courses_data'][0][1] }}</h3>
+            <p>{{ session['courses_data'][0][2] }}</p>
             <a href="{{ url_for('course_webdev') }}" class="btn">Enroll Now</a>
         </div>
+
         <div class="course">
-            <img src="../static/psychology.webp" alt="Psychology">
-            <h3>Introduction to Psychology: Understanding the Human Mind</h3>
-            <p>Explore the fascinating world of psychology and gain insights into human behavior.</p>
+            <img src="../static/psychology.webp" alt="{{ session['courses_data'][1][1] }}">
+            <h3>{{ session['courses_data'][1][1] }}</h3>
+            <p>{{ session['courses_data'][1][2] }}</p>
             <a href="{{ url_for('course_psych') }}" class="btn">Enroll Now</a>
         </div>
+
         <div class="course">
-            <img src="../static/per-fin.jpg" alt="Finance">
-            <h3>Personal Finance Management: Strategies for Financial Success</h3>
-            <p>Take control of your finances and plan for a secure financial future.</p>
+            <img src="../static/per-fin.jpg"  alt="{{ session['courses_data'][2][1] }}">
+            <h3>{{ session['courses_data'][2][1] }}</h3>
+            <p>{{ session['courses_data'][2][2] }}</p>
             <a href="{{ url_for('course_perfin') }}" class="btn">Enroll Now</a>
         </div>
+
         <div class="course">
-            <img src="../static/graphic-des.jpg" alt="Graphic Design">
-            <h3>Graphic Design Essentials</h3>
-            <p>Master the fundamentals of graphic design and unleash your creativity.</p>
+            <img src="../static/graphic-des.jpg" alt="{{ session['courses_data'][3][1] }}">
+            <h3>{{ session['courses_data'][3][1] }}</h3>
+            <p>{{ session['courses_data'][3][2] }}</p>
             <a href="{{ url_for('course_graphicdes') }}" class="btn">Enroll Now</a>
         </div>
+
         <div class="course">
-            <img src="../static/python-course.webp" alt="Python Programming">
-            <h3>Python Programming for Beginners: Learn Python from Scratch</h3>
-            <p>Start your journey into the world of programming with Python.</p>
+            <img src="../static/python-course.webp" alt="{{ session['courses_data'][4][1] }}">
+            <h3>{{ session['courses_data'][4][1] }}</h3>
+            <p>{{ session['courses_data'][4][2] }}</p>
             <a href="{{ url_for('course_python') }}" class="btn">Enroll Now</a>
         </div>
-    </section>
 
+    </section>
+    
+    
+    
     <footer>
         <p>&copy; 2024 Eduverse Clone. All rights reserved.</p>
     </footer>
