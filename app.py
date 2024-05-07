@@ -15,7 +15,7 @@ def authenticate_user(username, password):
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="localhost",
+            host="db",
             port="5432"
         )
 
@@ -86,7 +86,7 @@ def register():
                 dbname="admin",
                 user="admin",
                 password="Grace678",
-                host="localhost",
+                host="db",
                 port="5432"
             )
 
@@ -142,7 +142,7 @@ def courses():
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="localhost",
+            host="db",
             port="5432"
         )
         
