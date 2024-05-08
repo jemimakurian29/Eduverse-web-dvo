@@ -15,7 +15,7 @@ def authenticate_user(username, password):
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="db",
+            host="localhost",
             port="5432"
         )
 
@@ -86,7 +86,7 @@ def register():
                 dbname="admin",
                 user="admin",
                 password="Grace678",
-                host="db",
+                host="localhost",
                 port="5432"
             )
 
@@ -132,7 +132,33 @@ def profile():
 # Home page route
 @app.route('/home')
 def home_page():
-    return render_template('homepg2.html')
+    try:
+        # Connect to your PostgreSQL database
+        conn = psycopg2.connect(
+            dbname="admin",
+            user="admin",
+            password="Grace678",
+            host="localhost",
+            port="5432"
+        )
+        
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT course_id, title, description FROM course_details")
+        courses_data = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+        
+        # Save courses_data in session
+        session['courses_data'] = courses_data
+        
+        # Pass the fetched data to the template
+        return render_template('homepg2.html')
+    except Exception as e:
+        # Handle exceptions, such as database connection errors
+        return f"An error occurred: {e}"
+    
 
 @app.route('/courses')
 def courses():
@@ -142,7 +168,7 @@ def courses():
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="db",
+            host="localhost",
             port="5432"
         )
         
