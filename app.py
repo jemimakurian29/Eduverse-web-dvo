@@ -168,7 +168,7 @@ def courses():
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="localhost",
+            host="db",
             port="5432"
         )
         
