@@ -26,5 +26,5 @@ class TestCourseedu():
     self.driver.find_element(By.ID, "password").click()
     self.driver.find_element(By.ID, "password").send_keys("adminpwd")
     self.driver.find_element(By.CSS_SELECTOR, ".btn:nth-child(6)").click()
-    self.driver.find_element(By.LINK_TEXT, "Enroll Now").click()
+    self.driver.find_element(By.LINK_TEXT, "View").click()
   

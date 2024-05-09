@@ -87,8 +87,30 @@
         </div>
     </section>
     <footer>
-        <a class="btn">Mark Completed</a>
-        <!--<button onclick="markCourseComplete()">Mark Course Complete</button> -->
+        <a class="btn" onclick="markCourseComplete(('{{ course_title }}'))">Mark Completed</a>
     </footer>
+    <script>
+        function markCourseComplete(courseTitle) {
+            // Send a POST request to mark course completion
+            fetch('/mark_completed', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ courseTitle: courseTitle })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Congratulations! You've completed the course.");
+                } else {
+                    throw new Error('Completion marking failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Completion marking failed. Please try again later.');
+            });
+        }
+    </script>
 </body>
 </html>
