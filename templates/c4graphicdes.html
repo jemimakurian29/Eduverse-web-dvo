@@ -17,10 +17,34 @@
                     <li><a href="{{ url_for('home_page') }}">Home</a></li>
                     <li><a href="{{ url_for('courses') }}">Courses</a></li>
                     <li><a href="{{ url_for('profile') }}">Profile</a></li> 
+                    {% set course_title = session['courses_data'][2][1] %}
+                    <a onclick="enrollCourse('{{ course_title }}')"  class="btn">Enroll Now</a>
                 </ul>
             </nav>
         </div>
     </header>
+    <script>
+        function enrollCourse(courseTitle) {
+            fetch('/enroll', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ courseTitle: courseTitle })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Enrollment successful!');
+                } else {
+                    throw new Error('Enrollment failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Enrollment failed. Please try again later.');
+            });
+        }
+    </script>
     <section class="module">
         <h2>Module 1: Design Principles</h2>
         <div class="lessons">
@@ -74,5 +98,9 @@
             </div>
         </div>
     </section>
+    <footer>
+        <a class="btn">Mark Completed</a>
+        <!--<button onclick="markCourseComplete()">Mark Course Complete</button> -->
+    </footer>
 </body>
 </html>

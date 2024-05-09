@@ -15,7 +15,7 @@ def authenticate_user(username, password):
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="db",
+            host="localhost",
             port="5432"
         )
 
@@ -86,7 +86,7 @@ def register():
                 dbname="admin",
                 user="admin",
                 password="Grace678",
-                host="db",
+                host="localhost",
                 port="5432"
             )
 
@@ -118,16 +118,39 @@ def register():
     else:
         return render_template('login2.html')
 
-    
+
 @app.route('/profile')
 def profile():
     # Check if the user is logged in
     if 'user' in session and session['logged_in']:
         # Retrieve user information from session
         user = session['user']
-        return render_template('profile.html', user=user)
+        
+        # Connect to your PostgreSQL database
+        conn = psycopg2.connect(
+            dbname="admin",
+            user="admin",
+            password="Grace678",
+            host="localhost",
+            port="5432"
+        )
+
+        # Create a cursor object
+        cur = conn.cursor()
+
+        # Retrieve enrolled courses for the user from the database
+        cur.execute("SELECT DISTINCT title FROM enrollments WHERE username = %s", (user['username'],))
+        enrolled_courses = [row[0] for row in cur.fetchall()]
+
+        # Close the cursor and connection
+        cur.close()
+        conn.close()
+
+        # Pass user information and enrolled courses to the profile template
+        return render_template('profile.html', user=user, enrolled_courses=enrolled_courses)
     else:
         return redirect(url_for('login'))
+
 
 # Home page route
 @app.route('/home')
@@ -138,7 +161,7 @@ def home_page():
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="db",
+            host="localhost",
             port="5432"
         )
         
@@ -168,7 +191,7 @@ def courses():
             dbname="admin",
             user="admin",
             password="Grace678",
-            host="db",
+            host="localhost",
             port="5432"
         )
         
@@ -210,6 +233,46 @@ def course_graphicdes():
 @app.route('/c5python')
 def course_python():
     return render_template('c5python.html')
+
+from flask import request, jsonify
+
+@app.route('/enroll', methods=['POST'])
+def enroll():
+    data = request.json
+    course_title = data.get('courseTitle')
+    # Check if the user is logged in
+    if 'user' in session and session['logged_in']:
+        # Get the username from the session
+        username = session['user']['username']
+        print("Enrolling user", username, "in course:", course_title)
+        try:
+            
+            # Connect to your PostgreSQL database
+            conn = psycopg2.connect(
+                dbname="admin",
+                user="admin",
+                password="Grace678",
+                host="localhost",
+                port="5432"
+            )
+
+            # Create a cursor object
+            cur = conn.cursor()
+            # Insert enrollment record into the database
+            cur.execute("INSERT INTO enrollments (username, title) VALUES (%s, %s)", (username, course_title))
+            conn.commit()
+
+            # Close the cursor and connection
+            cur.close()
+            conn.close()
+
+            return jsonify({'message': 'Enrollment successful'}), 200
+
+        except psycopg2.Error as e:
+            print("Error enrolling in the course:", e)
+            return jsonify({'error': 'An error occurred during enrollment. Please try again later.'}), 500
+    else:
+        return jsonify({'error': 'You must be logged in to enroll in a course.'}), 401
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
